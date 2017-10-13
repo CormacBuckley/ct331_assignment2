@@ -12,6 +12,18 @@
 ;You may delete these comments!
 
 (provide ins_beg)
+(provide ins_end)
 
 (define (ins_beg el lst)
-  (display "Hello, I'm ins_beg!\n"))
+  (
+   display "Hello, I'm ins_beg!\n")
+
+  (cons el lst)
+  )
+
+(define (ins_end el lst)
+  (
+   display "Hello, I'm ins_end!\n")
+
+  (cons lst el)
+  )
