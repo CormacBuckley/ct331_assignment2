@@ -14,16 +14,28 @@
 (provide ins_beg)
 (provide ins_end)
 
+(provide count_top_level)
+
+;A
 (define (ins_beg el lst)
   (
-   display "Hello, I'm ins_beg!\n")
+   display "ins_beg Running\n")
 
   (cons el lst)
   )
 
+;B
 (define (ins_end el lst)
   (
-   display "Hello, I'm ins_end!\n")
+   display "ins_end Running\n")
 
-  (cons lst el)
+  (cons lst (list el))
   )
+
+;C
+(define (count_top_level list)
+  (if (null? list)
+      0
+      (+ 1 (count_top_level (cdr list)))
+  )
+)
